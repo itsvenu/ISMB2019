@@ -1,0 +1,44 @@
+---
+title: "ISMB/ECCB2019 Conference, Basel, 2019 twitter data"
+author: "Venu Thatikonda" 
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ISMBECCB2019-CONFERENCE}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Package helps retreiving tweets that were tweeted during a specific talk from ISMB/ECCB 2019 conference. Given a date, start and end time of a particular talk, the following code extracts tweets in that time slot.
+
+I hope this package will help people who did not attend the conference and people who attended but did not get the chance to listen to all talks.
+
+At following links, one can find times of different talks from different COSI's
+
+[https://www.iscb.org/ismbeccb2019-program/ismbeccb2019-cosi-other-abstracts](https://www.iscb.org/ismbeccb2019-program/ismbeccb2019-cosi-other-abstracts)
+
+
+```{r setup}
+library(ISMB2019)
+library(magrittr)
+
+data(ismb_dat2019)
+
+## date
+my_day <- "2019-07-24"
+
+## start time of talk HH:MM
+start_time <- "16:00"
+
+## end time of talk HH:MM
+end_time <- "17:00"
+
+ISMB2019::get_tweets(my_day = my_day, start_time = start_time, end_time = end_time)
+
+```
