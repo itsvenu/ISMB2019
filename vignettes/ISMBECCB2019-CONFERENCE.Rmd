@@ -1,5 +1,5 @@
 ---
-title: "ISMB/ECCB2019 Conference, Basel, 2019 twitter data"
+title: "ISMB2019 Usage"
 author: "Venu Thatikonda" 
 output: rmarkdown::html_vignette
 vignette: >

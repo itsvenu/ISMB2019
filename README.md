@@ -35,4 +35,3 @@ ISMB2019::get_tweets(my_day = my_day, start_time = start_time, end_time = end_ti
 ```
 
 
-
